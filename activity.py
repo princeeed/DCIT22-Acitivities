@@ -72,6 +72,7 @@ def problem2():
   user_order = int(input("item_number: "))
   print("")
   print("")
+  print("")
   line()
   print(address[1])
   line()
