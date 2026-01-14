@@ -70,7 +70,7 @@ while is_running:
                     
             elif state_m == "game_ultimate_mode":
                 if player_mode_button.is_clicked(mouse_position):
-                    print("PLAYER MODE")
+                    print("PLAYER MODE") 
                 elif computer_mode_button.is_clicked(mouse_position):
                     print("COMPUTER MODE")
 
@@ -114,6 +114,7 @@ while is_running:
         simple_mode_button.draw_button_sets(screen)
         ultimate_mode_button.draw_button_sets(screen)
         
+        #SIMPLE MODE
     elif state_m == "game_simple_mode":
         header = Header_title.render("SIMPLE MODE", True, WHITE)
 
@@ -123,6 +124,7 @@ while is_running:
         player_mode_button.draw_button_sets(screen)
         computer_mode_button.draw_button_sets(screen)
         
+        #ULTIMATE MODE
     elif state_m == "game_ultimate_mode":
         header = Header_title.render("ULTIMATE MODE", True, WHITE)
 
