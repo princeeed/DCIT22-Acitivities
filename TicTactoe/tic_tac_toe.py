@@ -1,5 +1,8 @@
 import pygame
 
+from sound_manager import SoundManager
+sound = SoundManager()
+
 # Tile class
 class Tile:
     def __init__(self, i, j):
@@ -230,6 +233,7 @@ class Game:
             has_put = self.main_tic_tac_toe.put_object_on_tile(self.screen, put_circle)
             if has_put and has_put != "occupied":
                 self.put_circle_main = not put_circle
+                sound.play_click()
 
         if self.mode == "normal":
             put_on_main_tile()
@@ -245,6 +249,7 @@ class Game:
                         break
 
                     self.put_circle_mini = not self.put_circle_mini
+                    sound.play_click()
                     if t.finished:
                         if t.winner == 1:
                             put_on_main_tile(True)
